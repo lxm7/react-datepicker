@@ -149,13 +149,15 @@ export default class Time extends React.Component {
           </div>
         </div>
         <div className="react-datepicker__time">
-          <div className="react-datepicker__time-box">
+          <div
+            className="react-datepicker__time-box"
+            style={height ? { overflow: "hidden", height } : {}}
+          >
             <ul
               className="react-datepicker__time-list"
               ref={list => {
                 this.list = list;
               }}
-              style={height ? { height } : {}}
             >
               {this.renderTimes.bind(this)()}
             </ul>
