@@ -49773,7 +49773,7 @@
           var currH = this.props.selected
             ? (0, _date_utils.getHour)(this.props.selected)
             : (0, _date_utils.getHour)((0, _date_utils.newDate)());
-          this.list.scrollTop = 30.5 * (currH * multiplier);
+          this.list.scrollTop = 30 * (multiplier * currH);
         };
 
         Time.prototype.render = function render() {
@@ -49858,8 +49858,7 @@
         excludeTimes: _propTypes2.default.array,
         monthRef: _propTypes2.default.object,
         timeCaption: _propTypes2.default.string,
-        injectTimes: _propTypes2.default.array,
-        setTimeoutTimeSelect: _propTypes2.default.func
+        injectTimes: _propTypes2.default.array
       };
       exports.default = Time;
 
